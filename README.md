@@ -94,6 +94,6 @@ BeautyCity/         # Основная конфигурация проекта
 - **static/** - Frontend-ресурсы (стили, скрипты, ассеты)
 
 ## Контакты
-- https://github.com/Aleksashka301
-- https://github.com/VASILIYKAS
-- https://github.com/Lek29
+- [Aleksashka301](https://github.com/Aleksashka301)
+- [VASILIYKAS](https://github.com/VASILIYKAS)
+- [Lek29](https://github.com/Lek29)
