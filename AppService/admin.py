@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Master, Salon, Service, Appointment
+from .models import Master, Salon, Service, Appointment, ConsultationRequest
 
 
 @admin.register(Master)
@@ -25,3 +25,8 @@ class AppointmentAdmin(admin.ModelAdmin):
 	list_display = ('id', 'client', 'master', 'date', 'reception_time')
 	list_filter = ('master', 'date',)
 	readonly_fields = ('created_at',)
+
+
+@admin.register(ConsultationRequest)
+class ConsultationRequestAdmin(admin.ModelAdmin):
+	list_display = ('name', 'phone', 'question')
