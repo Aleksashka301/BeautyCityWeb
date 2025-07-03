@@ -16,8 +16,8 @@ class FeedbackAdmin(admin.ModelAdmin):
 	readonly_fields = ('created_at',)
 
 
-@admin.register(Consultation)
-class ConsultationAdmin(admin.ModelAdmin):
-	list_display = ('id', 'name', 'phone', 'status', 'created_at',)
-	list_filter = ('created_at', 'status')
-	readonly_fields = ('created_at',)
+# @admin.register(Consultation)
+# class ConsultationAdmin(admin.ModelAdmin):
+# 	list_display = ('id', 'name', 'phone', 'status', 'created_at',)
+# 	list_filter = ('created_at', 'status')
+# 	readonly_fields = ('created_at',)
