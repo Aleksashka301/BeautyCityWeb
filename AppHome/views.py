@@ -48,10 +48,6 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-def notes(request):
-    return render(request, 'notes.html')
-
-
 def popup(request):
     return render(request, 'popup.html')
 
