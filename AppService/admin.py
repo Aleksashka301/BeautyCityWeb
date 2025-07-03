@@ -29,4 +29,5 @@ class AppointmentAdmin(admin.ModelAdmin):
 
 @admin.register(ConsultationRequest)
 class ConsultationRequestAdmin(admin.ModelAdmin):
-	list_display = ('name', 'phone', 'question')
+	list_display = ('name', 'phone', 'submitted_at')
+	readonly_fields = ('submitted_at',)
