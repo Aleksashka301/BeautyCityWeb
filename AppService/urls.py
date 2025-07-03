@@ -9,7 +9,7 @@ from AppService.views import (
     add_appointment,
     pick_master
 )
-from .services import page_notes
+from .services import page_notes, send_feedback
 
 
 urlpatterns = [
@@ -21,4 +21,5 @@ urlpatterns = [
     path('service/add/', add_appointment, name='add_appointment'),
     path('notes/', page_notes, name='notes'),
     path('book/master/<int:master_id>/', pick_master, name='pick_master'),
+    path('send-feedback/', send_feedback, name='send_feedback'),
 ]
