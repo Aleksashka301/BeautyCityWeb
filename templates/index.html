@@ -334,7 +334,7 @@
 					{% for feedback in feedbacks %}
 					<div class="col-md-3">
 						<div class="reviews__block">
-							<div class="reviews__name">{{ feedback.author.first_name }} {{ feedback.author.last_name }}.</div>
+							<div class="reviews__name">{{ feedback.author }}</div>
 							<img src="{% static 'img/rating.svg' %}" alt="rating" class="reviews__header_rating">
 							<div class="reviews__block_text">
 								{{ feedback.text }}
