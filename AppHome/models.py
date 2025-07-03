@@ -40,12 +40,7 @@ class Client(models.Model):
 
 
 class Feedback(models.Model):
-    author = models.ForeignKey(
-        Client,
-        on_delete=models.CASCADE,
-        related_name='comments',
-        verbose_name='Автор'
-    )
+    author = models.CharField(max_length=100, verbose_name='Имя автора')
     text = models.TextField(verbose_name='Текст')
     created_at = models.DateField(
         auto_now_add=True, verbose_name='Дата создания')
