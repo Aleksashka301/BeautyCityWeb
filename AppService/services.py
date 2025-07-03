@@ -1,8 +1,11 @@
 from django.db.models import Sum
-from django.shortcuts import render
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
 from django.utils.timezone import now
+from django.views.decorators.csrf import csrf_exempt
 
 from .models import Appointment
+from AppHome.models import Feedback
 
 
 def page_notes(request):
@@ -33,3 +36,18 @@ def page_notes(request):
 	}
 
 	return render(request, 'notes.html', context)
+
+@csrf_exempt
+def send_feedback(request):
+	if request.method == 'POST':
+		name = request.POST.get('fname')
+		text = request.POST.get('popupTextarea')
+
+		if name and text:
+			Feedback.objects.create(
+				author=name,
+				text=text
+			)
+			return redirect('notes')
+
+	return HttpResponse("Ошибка при отправке", status=400)
