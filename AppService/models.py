@@ -203,7 +203,7 @@ class ConsultationRequest(models.Model):
         auto_now_add=True, verbose_name="Дата заявки")
 
     class Meta:
-        verbose_name = "Заявка на консультацию"
+        verbose_name = "Заявку"
         verbose_name_plural = "Заявки на консультацию"
         ordering = ['-submitted_at']
 
