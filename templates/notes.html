@@ -220,7 +220,7 @@
 
 							{% for note in upcoming_appointments %}
 							<div class="notes__main_block">
-								<img src="{% static 'img/services/service3.svg' %}" alt="service1" class="notes__main_block__img">
+								<img src="{% static '{{ note.service.image.url }}' %}" alt="service1" class="notes__main_block__img">
 								<div class="notes__main_block__elems">
 									<div class="notes__main_block__header fic">
 										<div class="notes__main_block__header__itesm fic">
@@ -273,7 +273,7 @@
 
 							{% for note in past_appointments %}
 							<div class="notes__main_block">
-								<img src="{% static 'img/services/service3.svg' %}" alt="service1" class="notes__main_block__img">
+								<img src="{% static '{{ note.service.image.url' %}" alt="service1" class="notes__main_block__img">
 								<div class="notes__main_block__elems">
 									<div class="notes__main_block__header fic">
 										<div class="notes__main_block__header__itesm fic">
@@ -326,7 +326,7 @@
 							<button class="notes__pay_btn">Оплатить онлайн</button>
 							<div class="notes__pay_info">Вы можете оплатить услуги прямо сейчас онлайн или расплатиться  в салоне</div>
 							<div class="notes__pay_intro">Сумма оплаты</div>
-							<div class="notes__pay_sum">3 900 руб</div>
+							<div class="notes__pay_sum">{{ total_unpaid }} руб</div>
 						</div>
 					</div>
 				</div>
