@@ -271,7 +271,7 @@
 							<div class="masters__footer fic">
 								<div class="masters__footer_block">
 									<div class="masters__footer_light">СТАЖ РАБОТЫ:</div>
-									<div class="masters__footer_num">{{master.experience_years}}г. {{master.experience_monts}} мес.</div>
+									<div class="masters__footer_num">{{master.experience_years}}г. {{master.experience_months}} мес.</div>
 								</div>
 								<button class="masters__footer_btn" onclick="window.location.href='{% url 'pick_master' master.id %}'">Записаться</button>
 							</div>
@@ -334,7 +334,7 @@
 					{% for feedback in feedbacks %}
 					<div class="col-md-3">
 						<div class="reviews__block">
-							<div class="reviews__name">{{ feedback.author.first_name }} {{ feedback.author.last_name|first }}.</div>
+							<div class="reviews__name">{{ feedback.author.first_name }} {{ feedback.author.last_name }}.</div>
 							<img src="{% static 'img/rating.svg' %}" alt="rating" class="reviews__header_rating">
 							<div class="reviews__block_text">
 								{{ feedback.text }}
