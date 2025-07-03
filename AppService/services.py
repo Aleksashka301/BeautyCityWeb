@@ -31,5 +31,5 @@ def page_notes(request):
 		'past_appointments': past,
 		'total_unpaid': total_unpaid,
 	}
-	print(upcoming[0])
+
 	return render(request, 'notes.html', context)
