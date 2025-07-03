@@ -9,6 +9,7 @@ from AppService.views import (
     add_appointment,
     pick_master
 )
+from .services import page_notes
 
 
 urlpatterns = [
@@ -18,5 +19,6 @@ urlpatterns = [
     path('service/datetime/', fetch_datetime, name='service_datetime'),
     path('service/confirm/', confirm_service, name='confirm_service'),
     path('service/add/', add_appointment, name='add_appointment'),
+    path('notes/', page_notes, name='notes'),
     path('book/master/<int:master_id>/', pick_master, name='pick_master'),
 ]
