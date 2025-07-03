@@ -4,7 +4,7 @@ from django.shortcuts import redirect, render
 from django.utils.timezone import now
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import Appointment
+from .models import Appointment, Service
 from AppHome.models import Feedback
 
 
@@ -29,10 +29,13 @@ def page_notes(request):
 		else:
 			past.append(appointment)
 
+	services_images = list(Service.objects.all())
+
 	context = {
 		'upcoming_appointments': upcoming,
 		'past_appointments': past,
 		'total_unpaid': total_unpaid,
+		'services': services_images,
 	}
 
 	return render(request, 'notes.html', context)
